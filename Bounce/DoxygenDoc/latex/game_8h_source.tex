@@ -1,0 +1,49 @@
+\doxysection{game.\+h}
+\hypertarget{game_8h_source}{}\label{game_8h_source}\index{Project1/game.h@{Project1/game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_platform}{Platform}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_rectangle_shape}{sf::RectangleShape}}\ \mbox{\hyperlink{class_platform_a71834dba802213dc27aaf2e22f467c07}{shape}};\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_platform_ab63d1f47389b9a605cf4dbfdacbb298a}{Platform}}(\textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \mbox{\hyperlink{classsf_1_1_color}{sf::Color}}\ color\ =\ \mbox{\hyperlink{classsf_1_1_color_a95629b30de8c6856aa7d3afed12eb865}{sf::Color::Green}});}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_wall}{Wall}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_rectangle_shape}{sf::RectangleShape}}\ \mbox{\hyperlink{class_wall_a72d4495e89cf1e13b8a7623a52624d71}{shape}};\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_wall_aa46bd4475cdf51a811f88f92738272f3}{Wall}}(\textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \mbox{\hyperlink{classsf_1_1_color}{sf::Color}}\ color\ =\ \mbox{\hyperlink{classsf_1_1_color_ab03770d4817426b2614cfc33cf0e245c}{sf::Color::Blue}});}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obstacle}{Obstacle}}\ \{}
+\DoxyCodeLine{00055\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_rectangle_shape}{sf::RectangleShape}}\ \mbox{\hyperlink{class_obstacle_a89cbd14ba76a63946a1c3543d6a39a03}{shape}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obstacle_aa0974a0e030ef4c4a011bf9a4422ab4c}{velocityX}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{float}\ leftLimit,\ \mbox{\hyperlink{class_obstacle_a77cbf336c1a5a2288d5dce7c48165eda}{rightLimit}};\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_obstacle_ac953dd9ac1b308ae6e578d3d590bd3ef}{Obstacle}}(\textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ leftLimit,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_obstacle_a77cbf336c1a5a2288d5dce7c48165eda}{rightLimit}},\ \mbox{\hyperlink{classsf_1_1_color}{sf::Color}}\ color\ =\ \mbox{\hyperlink{classsf_1_1_color_a127dbf55db9c07d0fa8f4bfcbb97594a}{sf::Color::Red}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obstacle_a43a9f92e7d750971cc3e0a102d0e8f6c}{move}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obstacle_a167c6daef78865f28aa04e97068dbb18}{handleWallCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_wall}{Wall}}\&\ wall);}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_coin}{Coin}}\ \{}
+\DoxyCodeLine{00094\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_circle_shape}{sf::CircleShape}}\ \mbox{\hyperlink{class_coin_a25a7bad665f7f2eaedb891f92a847a41}{shape}};\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{class_coin_a297de5d10be7ef9fe550edcff2a020e1}{Coin}}(\textcolor{keywordtype}{float}\ radius,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_coin_ae5150b4a44525ca2302e910d5f337c3a}{isCollected}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsf_1_1_circle_shape}{sf::CircleShape}}\&\ player);}
+\DoxyCodeLine{00114\ \};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00130\ \textcolor{keywordtype}{void}\ resetGame(\mbox{\hyperlink{classsf_1_1_circle_shape}{sf::CircleShape}}\&\ player,\ \mbox{\hyperlink{classsf_1_1_vector2}{sf::Vector2f}}\&\ velocity,\ \textcolor{keywordtype}{bool}\&\ isOnGround,\ \textcolor{keywordtype}{bool}\&\ levelCompleted,\ \mbox{\hyperlink{classsf_1_1_view}{sf::View}}\&\ view,\ \textcolor{keywordtype}{int}\&\ coinCount,\ std::vector<Coin>\&\ coins,\ \textcolor{keyword}{const}\ std::vector<sf::Vector2f>\&\ defaultCoinPositions);}
+
+\end{DoxyCode}

@@ -1,0 +1,126 @@
+\doxysection{Obstacle Class Reference}
+\hypertarget{class_obstacle}{}\label{class_obstacle}\index{Obstacle@{Obstacle}}
+
+
+Class representing a moving obstacle (enemy).  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obstacle_ac953dd9ac1b308ae6e578d3d590bd3ef}{Obstacle}} (float width, float height, float x, float y, float left\+Limit, float \mbox{\hyperlink{class_obstacle_a77cbf336c1a5a2288d5dce7c48165eda}{right\+Limit}}, \mbox{\hyperlink{classsf_1_1_color}{sf\+::\+Color}} color=\mbox{\hyperlink{classsf_1_1_color_a127dbf55db9c07d0fa8f4bfcbb97594a}{sf\+::\+Color\+::\+Red}})
+\begin{DoxyCompactList}\small\item\em Constructor for the obstacle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_obstacle_a43a9f92e7d750971cc3e0a102d0e8f6c}{move}} ()
+\begin{DoxyCompactList}\small\item\em Moves the obstacle horizontally. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_obstacle_a167c6daef78865f28aa04e97068dbb18}{handle\+Wall\+Collision}} (const \mbox{\hyperlink{class_wall}{Wall}} \&wall)
+\begin{DoxyCompactList}\small\item\em Handles collisions with walls, reversing direction when hit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_obstacle_a89cbd14ba76a63946a1c3543d6a39a03}\label{class_obstacle_a89cbd14ba76a63946a1c3543d6a39a03} 
+\mbox{\hyperlink{classsf_1_1_rectangle_shape}{sf\+::\+Rectangle\+Shape}} {\bfseries shape}
+\begin{DoxyCompactList}\small\item\em The SFML shape representing the obstacle. \end{DoxyCompactList}\item 
+\Hypertarget{class_obstacle_aa0974a0e030ef4c4a011bf9a4422ab4c}\label{class_obstacle_aa0974a0e030ef4c4a011bf9a4422ab4c} 
+float {\bfseries velocityX}
+\begin{DoxyCompactList}\small\item\em The horizontal velocity of the obstacle. \end{DoxyCompactList}\item 
+\Hypertarget{class_obstacle_a5c5712e5afbf60566c40b223b1a04aa4}\label{class_obstacle_a5c5712e5afbf60566c40b223b1a04aa4} 
+float {\bfseries left\+Limit}
+\item 
+\Hypertarget{class_obstacle_a77cbf336c1a5a2288d5dce7c48165eda}\label{class_obstacle_a77cbf336c1a5a2288d5dce7c48165eda} 
+float {\bfseries right\+Limit}
+\begin{DoxyCompactList}\small\item\em Movement boundaries for the obstacle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a moving obstacle (enemy). 
+
+The obstacle moves horizontally and reverses direction upon reaching movement boundaries. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_obstacle_ac953dd9ac1b308ae6e578d3d590bd3ef}\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\doxysubsubsection{\texorpdfstring{Obstacle()}{Obstacle()}}
+{\footnotesize\ttfamily \label{class_obstacle_ac953dd9ac1b308ae6e578d3d590bd3ef} 
+Obstacle\+::\+Obstacle (\begin{DoxyParamCaption}\item[{float}]{width}{, }\item[{float}]{height}{, }\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{left\+Limit}{, }\item[{float}]{right\+Limit}{, }\item[{\mbox{\hyperlink{classsf_1_1_color}{sf\+::\+Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{classsf_1_1_color_a127dbf55db9c07d0fa8f4bfcbb97594a}{sf\+::\+Color\+::\+Red}}}}\end{DoxyParamCaption})}
+
+
+
+Constructor for the obstacle. 
+
+Constructs a moving obstacle with specified dimensions and movement limits.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the obstacle. \\
+\hline
+{\em height} & Height of the obstacle. \\
+\hline
+{\em x} & X-\/coordinate of the obstacle. \\
+\hline
+{\em y} & Y-\/coordinate of the obstacle. \\
+\hline
+{\em left\+Limit} & Left boundary of movement. \\
+\hline
+{\em right\+Limit} & Right boundary of movement. \\
+\hline
+{\em color} & Color of the obstacle (default is red).\\
+\hline
+{\em width} & Width of the obstacle. \\
+\hline
+{\em height} & Height of the obstacle. \\
+\hline
+{\em x} & X-\/coordinate starting position. \\
+\hline
+{\em y} & Y-\/coordinate starting position. \\
+\hline
+{\em left\+Limit} & Left boundary for movement. \\
+\hline
+{\em right\+Limit} & Right boundary for movement. \\
+\hline
+{\em color} & Color of the obstacle (default is red). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_obstacle_a167c6daef78865f28aa04e97068dbb18}\index{Obstacle@{Obstacle}!handleWallCollision@{handleWallCollision}}
+\index{handleWallCollision@{handleWallCollision}!Obstacle@{Obstacle}}
+\doxysubsubsection{\texorpdfstring{handleWallCollision()}{handleWallCollision()}}
+{\footnotesize\ttfamily \label{class_obstacle_a167c6daef78865f28aa04e97068dbb18} 
+void Obstacle\+::handle\+Wall\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wall}{Wall}} \&}]{wall}{}\end{DoxyParamCaption})}
+
+
+
+Handles collisions with walls, reversing direction when hit. 
+
+Reverses obstacle direction upon colliding with a wall.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wall} & The wall the obstacle collides with.\\
+\hline
+{\em wall} & The wall with which the obstacle collides. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_obstacle_a43a9f92e7d750971cc3e0a102d0e8f6c}\index{Obstacle@{Obstacle}!move@{move}}
+\index{move@{move}!Obstacle@{Obstacle}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{class_obstacle_a43a9f92e7d750971cc3e0a102d0e8f6c} 
+void Obstacle\+::move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Moves the obstacle horizontally. 
+
+Moves the obstacle horizontally and reverses direction when boundaries are reached.
+
+Reverses direction when the obstacle reaches the left or right limits. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Project1/game.\+h\item 
+Project1/bounce.\+cpp\end{DoxyCompactItemize}

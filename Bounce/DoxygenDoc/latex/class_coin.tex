@@ -1,0 +1,88 @@
+\doxysection{Coin Class Reference}
+\hypertarget{class_coin}{}\label{class_coin}\index{Coin@{Coin}}
+
+
+Class representing a coin in the game.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_coin_a297de5d10be7ef9fe550edcff2a020e1}{Coin}} (float radius, float x, float y)
+\begin{DoxyCompactList}\small\item\em Constructor for the coin. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_coin_ae5150b4a44525ca2302e910d5f337c3a}{is\+Collected}} (const \mbox{\hyperlink{classsf_1_1_circle_shape}{sf\+::\+Circle\+Shape}} \&player)
+\begin{DoxyCompactList}\small\item\em Checks if the player has collected the coin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coin_a25a7bad665f7f2eaedb891f92a847a41}\label{class_coin_a25a7bad665f7f2eaedb891f92a847a41} 
+\mbox{\hyperlink{classsf_1_1_circle_shape}{sf\+::\+Circle\+Shape}} {\bfseries shape}
+\begin{DoxyCompactList}\small\item\em The SFML shape representing the coin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a coin in the game. 
+
+The coin can be collected by the player. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_coin_a297de5d10be7ef9fe550edcff2a020e1}\index{Coin@{Coin}!Coin@{Coin}}
+\index{Coin@{Coin}!Coin@{Coin}}
+\doxysubsubsection{\texorpdfstring{Coin()}{Coin()}}
+{\footnotesize\ttfamily \label{class_coin_a297de5d10be7ef9fe550edcff2a020e1} 
+Coin\+::\+Coin (\begin{DoxyParamCaption}\item[{float}]{radius}{, }\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the coin. 
+
+Constructs a coin at a specified position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Radius of the coin. \\
+\hline
+{\em x} & X-\/coordinate of the coin. \\
+\hline
+{\em y} & Y-\/coordinate of the coin.\\
+\hline
+{\em radius} & Radius of the coin. \\
+\hline
+{\em x} & X-\/coordinate position. \\
+\hline
+{\em y} & Y-\/coordinate position. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coin_ae5150b4a44525ca2302e910d5f337c3a}\index{Coin@{Coin}!isCollected@{isCollected}}
+\index{isCollected@{isCollected}!Coin@{Coin}}
+\doxysubsubsection{\texorpdfstring{isCollected()}{isCollected()}}
+{\footnotesize\ttfamily \label{class_coin_ae5150b4a44525ca2302e910d5f337c3a} 
+bool Coin\+::is\+Collected (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_circle_shape}{sf\+::\+Circle\+Shape}} \&}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the player has collected the coin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the coin is collected. 
+
+false If the coin is not collected. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Project1/game.\+h\item 
+Project1/bounce.\+cpp\end{DoxyCompactItemize}
